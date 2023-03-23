@@ -1,11 +1,23 @@
 <hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<p>Start editing to dddsee some magic happen :)</p>
 
 <form>
-<input name='validate' #validate='ngModel' ngModel type="text" pattern="[0-9]{0,12}" required />
-0 or 12 Digit : {{ validate.valid }} <br/>
-<input name='validate2' #validate2='ngModel' ngModel type="text" pattern="[0-9]{12}" required/>
-Exact 12 digit : {{ validate2.valid }}
+  <input
+    name="validate"
+    #validate="ngModel"
+    ngModel
+    type="text"
+    [pattern]="pattern"
+    required
+  />
+  0 or 12 Digit : {{ validate.valid }} <br />
+  <input
+    name="validate2"
+    #validate2="ngModel"
+    ngModel
+    type="text"
+    pattern="[0-9]{12}"
+    required
+  />
+  Exact 12 digit : {{ validate2.valid }}
 </form>
